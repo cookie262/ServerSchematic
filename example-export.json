@@ -1,0 +1,101 @@
+{
+  "version": "1.0",
+  "exportedAt": "2023-10-15T10:30:00.000Z",
+  "serverId": "123456789012345678",
+  "roles": [
+    {
+      "id": "123456789012345679",
+      "name": "Moderator",
+      "color": 16776960,
+      "hoist": true,
+      "mentionable": false,
+      "permissions": [
+        "KickMembers",
+        "BanMembers",
+        "ManageMessages",
+        "ManageChannels",
+        "ManageRoles"
+      ],
+      "position": 3
+    },
+    {
+      "id": "123456789012345680",
+      "name": "Member",
+      "color": 3066993,
+      "hoist": false,
+      "mentionable": true,
+      "permissions": [
+        "SendMessages",
+        "ReadMessageHistory",
+        "UseVAD",
+        "Speak",
+        "Connect"
+      ],
+      "position": 1
+    }
+  ],
+  "channels": [
+    {
+      "id": "123456789012345681",
+      "name": "general",
+      "type": 0,
+      "position": 0,
+      "permissionOverwrites": [
+        {
+          "id": "123456789012345679",
+          "type": 0,
+          "allow": ["ManageMessages"],
+          "deny": []
+        }
+      ]
+    },
+    {
+      "id": "123456789012345682",
+      "name": "Text Channels",
+      "type": 4,
+      "position": 0,
+      "permissionOverwrites": [],
+      "children": [
+        {
+          "id": "123456789012345683",
+          "name": "announcements",
+          "type": 0,
+          "position": 1,
+          "permissionOverwrites": [
+            {
+              "id": "123456789012345678",
+              "type": 0,
+              "allow": [],
+              "deny": ["SendMessages"]
+            }
+          ]
+        },
+        {
+          "id": "123456789012345684",
+          "name": "random",
+          "type": 0,
+          "position": 2,
+          "permissionOverwrites": []
+        }
+      ]
+    },
+    {
+      "id": "123456789012345685",
+      "name": "Voice Channels",
+      "type": 4,
+      "position": 1,
+      "permissionOverwrites": [],
+      "children": [
+        {
+          "id": "123456789012345686",
+          "name": "General",
+          "type": 2,
+          "position": 3,
+          "permissionOverwrites": [],
+          "bitrate": 64000,
+          "userLimit": 0
+        }
+      ]
+    }
+  ]
+}
